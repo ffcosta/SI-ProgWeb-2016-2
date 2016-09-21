@@ -1,0 +1,114 @@
+@CHARSET "UTF-8";
+.container {
+margin: 0 auto;
+width: 960px;
+}
+body {
+font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana,
+sans-serif;
+line-height: 1.6;
+}
+article {
+border-color: #CCC #999 #999 #CCC;
+border: 1px solid #CCC;
+margin-bottom: 20px;
+padding: 10px;
+}
+article h2 {
+border-bottom: 1px dashed #7E9F19;
+margin: 0;
+}
+body {
+background: #e6ffe6;
+font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana,
+sans-serif;
+line-height: 1.6;
+}
+article {
+background-color: #FFF;
+border: 1px solid #CCC;
+border-color: #CCC #999 #999 #CCC;
+margin-bottom: 20px;
+padding: 10px;
+}
+article a {
+color: #2C88A7;
+font-weight: bold;
+}
+h1 a {
+color: #7E9F19;
+text-decoration: none;
+}
+h1 a:hover {
+background-color: #7E9F19;
+color: #FFF;
+}
+.container h1{
+	text-align: center;
+}
+article img {
+border: 1px solid #7E9F19;
+float: left;
+margin: 10px 10px 0 0;
+padding: 2px;
+}
+.depois {
+border: 1px solid #7E9F19;
+float: right;
+margin: -130px 0 0 0;
+}
+.clear {
+clear: both;
+}
+
+footer {
+font-size: 12px;
+text-align: center;
+
+}
+aside {
+background-color: #FFFBE4;
+border: 1px solid #C9BC8F;
+padding: 10px;
+}
+aside h3 {
+font-size: 14px;
+margin-top: 0;
+}
+aside ol {
+font-size: 12px;
+margin-bottom: 0;
+}
+.places {
+padding: 0 0 0 80px;
+width: 800px;
+}
+aside {
+background-color: #FFFBE4;
+border: 1px solid #C9BC8F;
+float: right;
+padding: 10px;
+width: 260px;
+}
+h2{
+	text-align: center;
+}
+.imc{
+	margin-top: 100px;
+}
+.tip::before {
+content: "\261E";
+margin-right: 10px;
+font-size: 90px;
+}
+.tip::after {
+content: "\261C";
+font-size: 90px;
+margin-left: 10px;
+}
+.tip{
+	text-align: center;
+}
+header{
+	text-align: center;
+}
