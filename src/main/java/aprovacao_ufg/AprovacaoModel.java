@@ -1,7 +1,5 @@
 package aprovacao_ufg;
 
-import java.beans.FeatureDescriptor;
-
 public class AprovacaoModel {
 	private static String aprovadoFreq;
 	private static String aprovadoNota;
