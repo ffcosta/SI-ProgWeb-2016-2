@@ -3,6 +3,11 @@
 margin: 0 auto;
 width: 960px;
 }
+.resultado {
+margin: 0 auto;
+width: 360px;
+}
+
 body {
 font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana,
 sans-serif;
@@ -111,4 +116,11 @@ margin-left: 10px;
 }
 header{
 	text-align: center;
+}
+.nome{
+	margin-left: 10px;
+}
+.resultado{
+	text-align: center;
+	font-size: 20px;
 }

@@ -1,41 +1,49 @@
 package aprovacao_ufg;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.beans.FeatureDescriptor;
 
-/**
- * Servlet implementation class AprovacaoModel
- */
-@WebServlet("/AprovacaoModel")
-public class AprovacaoModel extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AprovacaoModel() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+public class AprovacaoModel {
+	private static String aprovadoFreq;
+	private static String aprovadoNota;
+	
+	 public static void verifacarFrequencia(float frequencia){
+		 if(frequencia == -1){
+			 aprovadoFreq = "empty";
+		 }
+		 else if(frequencia >= 0.75)
+			 aprovadoFreq = "aprovado";
+		 
+		 else if(frequencia < 0.75 && frequencia != -1){
+			 aprovadoFreq = "reprovado";
+		 }
+	 }
+	 public static void verifacarNota(float nota){
+		 if(nota == -1)
+			 aprovadoNota = "empty";
+		 else if(nota >= 6)
+			 aprovadoNota = "aprovado";
+		 else if(nota < 6 && nota != -1)
+			 aprovadoNota = "reprovado";
+	 }
+	 
+	 
+		
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
-
+		  public static String verficarAprovacao(String nome) {
+		   
+		    String result = "";
+		    if(aprovadoFreq == "empty" && aprovadoNota == "empty")
+		    	result = "";
+		    if(aprovadoFreq == "aprovado" && aprovadoNota == "aprovado")
+		    	result = "Aluno " + nome + " Aprovado";
+		    else if(aprovadoFreq == "reprovado" && aprovadoNota == "aprovado")
+		    	result = "Aluno " + nome +" Reprovado por frequência";
+		    else if(aprovadoFreq == "reprovado" && aprovadoNota == "reprovado")
+		    	result ="Aluno " + nome +" Reprovado por média e frequênica";
+		    else if(aprovadoFreq == "aprovado" && aprovadoNota == "reprovado")
+		    	result ="Aluno " + nome +" Reprovado por média";
+		   
+		   
+		    return result;
+		  }
 }
